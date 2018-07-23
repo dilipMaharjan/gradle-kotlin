@@ -45,3 +45,36 @@ task("navigate-file") {
         println(env)
     }
 }
+
+class KotlinClas {
+    fun sayHello() {
+        println("KotlinClass")
+    }
+}
+
+val kotlinClass = KotlinClas()
+kotlinClass.sayHello()
+
+val myTask = task("My-Task")
+myTask.description = "Description here"
+myTask.group = "This is the heading for group"
+myTask.doLast {
+    println("Do last")
+}
+
+myTask.doFirst {
+    println("Do First")
+}
+
+task("consize-task") {
+    description = "consize task description"
+    group = "This is consize group"
+
+    doFirst {
+        println("Do this first")
+    }
+
+    doLast {
+        println("Do this last")
+    }
+}
